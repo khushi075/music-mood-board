@@ -1,0 +1,19 @@
+<!-- templates/input_text.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+    <title>Input Text</title>
+</head>
+<body>
+    <h2 class="text-violet-500">Hi, {{user_display_name}}</h2>
+    <h2>How are you feeling today?</h2>
+    <form action="{{ url_for('auth_bp.inptxt') }}" method="POST">
+        <textarea name="user_input" rows="2" cols="50" placeholder="Type in your mood for amazing songs..."></textarea>
+        <br><br>
+        <input type="submit" value="Get my Moodboard">
+    </form>
+</body>
+</html>

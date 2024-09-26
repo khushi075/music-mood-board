@@ -1,0 +1,16 @@
+{
+  "name": "music-mood-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildcss": "npx tailwindcss -i ./moodBoard/static/css/input.css -o ./moodBoard/static/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.11"
+  }
+}

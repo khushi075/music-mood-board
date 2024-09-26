@@ -1,0 +1,36 @@
+<!-- templates/recommendations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+    <title>Track Recommendations</title>
+</head>
+<body>
+    <h1>Track Recommendations</h1>
+    <ul>
+        {% for track in playlists %}
+
+            <li>
+                <!-- Embed the Spotify track using iframe -->
+                <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/track/{{ track.uri }}" 
+                    width="60%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+                <a href="{{ track.url }}" target="_blank">
+                    <!-- <img src="{{ track.image }}" alt="{{ track.name }} cover" width="100"> -->
+                    {{ track.name }} - {{ track.artist }}
+                </a>
+                <!-- <p>{{ track.name }} - {{ track.artist }}</p> -->
+            </li>
+   
+        {% endfor %}
+    </ul>
+</body>
+</html>

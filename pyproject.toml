@@ -1,0 +1,10 @@
+[project]
+name = "music-mood-board"
+description="a mood board generator that picks songs based on a user’s mood or emotional state, visually representing them with album covers, colors, or associated imagery"
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
